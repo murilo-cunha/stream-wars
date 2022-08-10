@@ -1,94 +1,39 @@
-import gsap from "gsap";
-import React, { useEffect, useRef, useState } from "react";
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Crawl from "./Crawl";
 
-import "./App.css";
-import logo from "./logo.svg";
-import volumeOff from "./volume_off.svg";
-import volumeOn from "./volume_on.svg";
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "90%",
+  bgcolor: "black",
+  border: "2px solid #262525",
+  boxShadow: 24,
+  p: 4,
+};
 
-function App() {
-  const intro = useRef();
-  const title = useRef();
-  const content = useRef();
-  const audio = useRef();
-
-  const [muted, setMuted] = useState(true);
-
-  useEffect(() => {
-    let tl = new gsap.timeline();
-
-    tl.to(intro.current, {
-      opacity: 1,
-      delay: 1,
-      duration: 4.5
-    })
-      .to(intro.current, {
-        opacity: 0,
-        duration: 1.5,
-        onComplete: () => {
-          audio.current.play();
-        }
-      })
-      .set(title.current, { opacity: 1, scale: 2.75, delay: 0.5 })
-      .to(title.current, { scale: 0.05, ease: "power2", duration: 8 })
-      .to(title.current, { opacity: 0, duration: 1.5 }, "-=1.5")
-      .to(content.current, { top: "-170%", duration: 200 });
-  }, []);
+export default function BasicModal() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
-    <div className="container">
-      <section className="intro" ref={intro}>
-        <p>
-          A long time ago, in a galaxy far,
-          <br /> far away....
-        </p>
-      </section>
-      <section className="title" ref={title}>
-        <img src={logo} alt="Code Wars title" />
-      </section>
-      <section className="crawl">
-        <div className="content" ref={content}>
-          <h1 className="episode-number">Episode X</h1>
-          <h2 className="episode-title">THE APP AWAKENS</h2>
-          <p>
-            The Development Team Lead has vanished. In her absence, the sinister
-            FUNCTIONAL BUG has risen from the ashes of the CI Tool and will not
-            rest until the last developer has been destroyed.
-          </p>
-          <p>
-            With the support of the QA TEAM, the Software Developer leads a
-            brave RESISTANCE. He is desperate to find his Lead and gain her help
-            in restoring peace and justice to the repository.
-          </p>
-          <p>
-            The Developer has sent his most daring editor theme on a secret
-            mission to the production branch, where an old ally has discovered a
-            clue to the Lead’s whereabouts....
-          </p>
-        </div>
-      </section>
-      <audio ref={audio} muted>
-        <source
-          type="audio/mpeg"
-          src="https://ia801501.us.archive.org/23/items/StarWars_20180709/Star%20Wars.mp3"
-        />
-      </audio>
-      <button
-        className="volume"
-        type="button"
-        onClick={() => {
-          audio.current.muted = !muted;
-          setMuted(!muted);
-        }}
+    <div>
+      <Button onClick={handleOpen}>Open modal</Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
       >
-        {muted ? (
-          <img src={volumeOff} alt="Volume is off" />
-        ) : (
-          <img src={volumeOn} alt="Volume is on" />
-        )}
-      </button>
+        <Box sx={style}>
+          <Crawl />
+        </Box>
+      </Modal>
     </div>
   );
 }
-
-export default App;
