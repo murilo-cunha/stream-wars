@@ -50,8 +50,8 @@ function Crawl() {
       </section>
       <section className="crawl">
         <div className="content" ref={content}>
-          <h1 className="episode-number">Episode X</h1>
-          <h2 className="episode-title">THIBAULD IS DA BEST!</h2>
+          <h1 className="episode-number">Episode 0</h1>
+          <h2 className="episode-title">VITALE IS DA BEST!</h2>
           <p>
             The Development Team Lead has vanished. In her absence, the sinister
             FUNCTIONAL BUG has risen from the ashes of the CI Tool and will not
