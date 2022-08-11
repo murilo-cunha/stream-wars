@@ -6,50 +6,50 @@ import logo from "./logo.svg";
 import volumeOff from "./volume_off.svg";
 import volumeOn from "./volume_on.svg";
 
-function Crawl({ _intro, episodeNumber, episodeTitle, _content }) {
-  const intro = useRef();
-  const title = useRef();
-  const content = useRef();
-  const audio = useRef();
+function Crawl({ intro, episodeNumber, episodeTitle, content }) {
+  const introAnimation = useRef();
+  const titleAnimation = useRef();
+  const contentAnimation = useRef();
+  const audioAnimation = useRef();
 
   const [muted, setMuted] = useState(true);
 
   useEffect(() => {
     let tl = new gsap.timeline();
 
-    tl.to(intro.current, {
+    tl.to(introAnimation.current, {
       opacity: 1,
       delay: 1,
       duration: 4.5,
     })
-      .to(intro.current, {
+      .to(introAnimation.current, {
         opacity: 0,
         duration: 1.5,
         onComplete: () => {
-          if (audio.current !== null) {
-            audio.current.play();
+          if (audioAnimation.current !== null) {
+            audioAnimation.current.play();
           }
         },
       })
-      .set(title.current, { opacity: 1, scale: 2.75, delay: 0.5 })
-      .to(title.current, { scale: 0.05, ease: "power2", duration: 8 })
-      .to(title.current, { opacity: 0, duration: 1.5 }, "-=1.5")
-      .to(content.current, { top: "-170%", duration: 200 });
+      .set(titleAnimation.current, { opacity: 1, scale: 2.75, delay: 0.5 })
+      .to(titleAnimation.current, { scale: 0.05, ease: "power2", duration: 8 })
+      .to(titleAnimation.current, { opacity: 0, duration: 1.5 }, "-=1.5")
+      .to(contentAnimation.current, { top: "-170%", duration: 200 });
   }, []);
 
   return (
     <div className="container">
-      <section className="intro" ref={intro}>
-        <p>{_intro}</p>
+      <section className="intro" ref={introAnimation}>
+        <p>{intro}</p>
       </section>
-      <section className="title" ref={title}>
+      <section className="title" ref={titleAnimation}>
         <img src={logo} alt="Code Wars title" />
       </section>
       <section className="crawl">
-        <div className="content" ref={content}>
+        <div className="content" ref={contentAnimation}>
           <h1 className="episode-number">{episodeNumber}</h1>
           <h2 className="episode-title">{episodeTitle}</h2>
-          {/* {_content.map((el) => (
+          {/* {content.map((el) => (
             <p>el</p>
           ))} */}
           <p>
@@ -69,7 +69,7 @@ function Crawl({ _intro, episodeNumber, episodeTitle, _content }) {
           </p>
         </div>
       </section>
-      <audio ref={audio} muted>
+      <audio ref={audioAnimation} muted>
         <source
           type="audio/mpeg"
           src="https://ia801501.us.archive.org/23/items/StarWars_20180709/Star%20Wars.mp3"
@@ -79,7 +79,7 @@ function Crawl({ _intro, episodeNumber, episodeTitle, _content }) {
         className="volume"
         type="button"
         onClick={() => {
-          audio.current.muted = !muted;
+          audioAnimation.current.muted = !muted;
           setMuted(!muted);
         }}
       >
