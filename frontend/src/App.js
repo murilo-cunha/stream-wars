@@ -13,7 +13,7 @@ export default function BasicModal() {
     <div>
       <Button
         sx={{
-          width: "50%",
+          width: "40%",
           bgcolor: "#262525",
           border: "2px solid #262525",
           p: 4,
@@ -34,7 +34,7 @@ export default function BasicModal() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "95%",
+            width: "90%",
             height: "100%",
             bgcolor: "black",
             border: "2px solid #262525",
@@ -42,7 +42,12 @@ export default function BasicModal() {
             p: 4,
           }}
         >
-          <Crawl />
+          <Crawl
+            _intro="Not so long ago, in an office not so far,\n far away...."
+            episodeNumber="Episode 0"
+            episodeTitle="SNOWFLAKE AND ML: A LOVE STORY"
+            _content='[""]'
+          />
         </Box>
       </Modal>
     </div>

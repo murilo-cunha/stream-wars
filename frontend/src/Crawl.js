@@ -6,7 +6,7 @@ import logo from "./logo.svg";
 import volumeOff from "./volume_off.svg";
 import volumeOn from "./volume_on.svg";
 
-function Crawl() {
+function Crawl({ _intro, episodeNumber, episodeTitle, _content }) {
   const intro = useRef();
   const title = useRef();
   const content = useRef();
@@ -40,18 +40,18 @@ function Crawl() {
   return (
     <div className="container">
       <section className="intro" ref={intro}>
-        <p>
-          A long time ago, in a galaxy far,
-          <br /> far away....
-        </p>
+        <p>{_intro}</p>
       </section>
       <section className="title" ref={title}>
         <img src={logo} alt="Code Wars title" />
       </section>
       <section className="crawl">
         <div className="content" ref={content}>
-          <h1 className="episode-number">Episode 0</h1>
-          <h2 className="episode-title">VITALE IS DA BEST!</h2>
+          <h1 className="episode-number">{episodeNumber}</h1>
+          <h2 className="episode-title">{episodeTitle}</h2>
+          {/* {_content.map((el) => (
+            <p>el</p>
+          ))} */}
           <p>
             The Development Team Lead has vanished. In her absence, the sinister
             FUNCTIONAL BUG has risen from the ashes of the CI Tool and will not
