@@ -35,7 +35,6 @@ export default function BasicModal() {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "90%",
-            height: "100%",
             bgcolor: "black",
             border: "2px solid #262525",
             boxShadow: 24,
@@ -43,10 +42,10 @@ export default function BasicModal() {
           }}
         >
           <Crawl
-            _intro="Not so long ago, in an office not so far,\n far away...."
+            intro={"Not so long ago, in an office not so far,\nfar away...."}
             episodeNumber="Episode 0"
             episodeTitle="SNOWFLAKE AND ML: A LOVE STORY"
-            _content='[""]'
+            content={"this is\n\nthe test"}
           />
         </Box>
       </Modal>

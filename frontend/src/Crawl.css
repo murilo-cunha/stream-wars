@@ -12,6 +12,7 @@
   transform: translate(-50%, -50%);
   top: 50%;
   z-index: 200;
+  white-space: pre-wrap;
 }
 
 .intro p {
@@ -81,6 +82,7 @@
   line-height: 1.33;
   margin-bottom: 4rem;
   text-align: justify;
+  white-space: pre-wrap;
 }
 
 .volume {
