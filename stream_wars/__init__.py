@@ -16,8 +16,8 @@ else:
         url="http://localhost:3000",
     )  
 
-def stream_wars(button_text: str, *, intro: str, episode_number: str, episode_title: str, content: str, key: str=None) -> CustomComponent:
-    return _stream_wars( button_text=button_text, intro=intro, episode_number=episode_number, episode_title=episode_title, content=content, key=key)
+def stream_wars(button_text: str, *, intro: str, title: str, episode_number: str, episode_title: str, content: str, key: str=None) -> CustomComponent:
+    return _stream_wars( button_text=button_text, intro=intro, title=title, episode_number=episode_number, episode_title=episode_title, content=content, key=key)
 
 if __name__ == "__main__":
     import streamlit as st
