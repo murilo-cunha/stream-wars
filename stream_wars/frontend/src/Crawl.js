@@ -2,8 +2,8 @@ import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 
 import "./Crawl.css";
-import volumeOff from "./volume_off.svg";
-import volumeOn from "./volume_on.svg";
+import volumeOff from "../public/volume_off.svg";
+import volumeOn from "../public/volume_on.svg";
 
 function Crawl({ intro, title, episodeNumber, episodeTitle, content }) {
   const introAnimation = useRef();
