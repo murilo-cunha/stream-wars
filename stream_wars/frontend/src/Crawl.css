@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Star Jedi Hollow';
-  src: url('https://raw.githubusercontent.com/datarootsio/stream-wars/main/stream_wars/frontend/public/StarJediHollow.woff2') format('woff2'),
-       url('https://raw.githubusercontent.com/datarootsio/stream-wars/main/stream_wars/frontend/public/StarJediHollow.woff') format('woff');
+  src: url('static/StarJediHollow.woff2') format('woff2'),
+       url('static/StarJediHollow.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
