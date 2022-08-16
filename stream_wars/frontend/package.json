@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -15,7 +16,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "3.3.0",
-    "streamlit-component-lib": "^1.4.0"
+    "streamlit-component-lib": "^1.4.0",
+    "streamlit-component-lib-react-hooks": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

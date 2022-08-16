@@ -2,11 +2,10 @@ import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 
 import "./Crawl.css";
-import logo from "./logo.svg";
 import volumeOff from "./volume_off.svg";
 import volumeOn from "./volume_on.svg";
 
-function Crawl({ intro, episodeNumber, episodeTitle, content }) {
+function Crawl({ intro, title, episodeNumber, episodeTitle, content }) {
   const introAnimation = useRef();
   const titleAnimation = useRef();
   const contentAnimation = useRef();
@@ -43,7 +42,7 @@ function Crawl({ intro, episodeNumber, episodeTitle, content }) {
         <p>{intro}</p>
       </section>
       <section className="title" ref={titleAnimation}>
-        <img src={logo} alt="Code Wars title" />
+        <p>{title.toLowerCase()}</p>
       </section>
       <section className="crawl">
         <div className="content" ref={contentAnimation}>

@@ -1319,6 +1319,13 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
+"@mui/icons-material@^5.8.4":
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.8.4.tgz#3f2907c9f8f5ce4d754cb8fb4b68b5a1abf4d095"
+  integrity sha512-9Z/vyj2szvEhGWDvb+gG875bOGm8b8rlHBKOD1+nA3PcgC3fV6W1AU6pfOorPeBfH2X4mb9Boe97vHvaSndQvA==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+
 "@mui/material@^5.10.0":
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.10.0.tgz#35f6484b7dec40a38874fa948a44a073f4d3a4c7"
@@ -9881,7 +9888,14 @@ stream-shift@^1.0.0:
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.1.tgz#d7088281559ab2778424279b0877da3c392d5a3d"
   integrity sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==
 
-streamlit-component-lib@^1.4.0:
+streamlit-component-lib-react-hooks@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/streamlit-component-lib-react-hooks/-/streamlit-component-lib-react-hooks-1.0.2.tgz#3865e04009cd02ff3973adfb736d375aa3531c70"
+  integrity sha512-2ztieTXN4XaHL/A/JFEs2eaf5LcPDpQ+aLkk3SiqYTqZRJkPTw6RhAmxc62WMWa9m3TKp7ow7N1TWo0YfeJfkA==
+  dependencies:
+    streamlit-component-lib "^1.2.0"
+
+streamlit-component-lib@^1.2.0, streamlit-component-lib@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/streamlit-component-lib/-/streamlit-component-lib-1.4.0.tgz#14955cfee0cd6dbd924880c03e569518bd997e4e"
   integrity sha512-8ne67TdvJXuCczzUHp5FR6CxZr9T/ojY+LaNNn8FdXRXIGhVFUocKe84h1vJ5KhnTcI3rIGr7nnVUST1N7gtxA==
