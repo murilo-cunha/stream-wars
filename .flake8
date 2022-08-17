@@ -1,0 +1,11 @@
+[flake8]
+exclude =
+    .git,
+    *.egg-info,
+    __pycache__,
+    .tox,
+    .pytest_cache
+    .ipynb_checkpoints,
+    venv,
+    docs
+max-line-length = 88

@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Star Jedi Hollow';
-  src: url('static/StarJediHollow.woff2') format('woff2'),
-       url('static/StarJediHollow.woff') format('woff');
+  font-family: "Star Jedi Hollow";
+  src: url("static/StarJediHollow.woff2") format("woff2"),
+    url("static/StarJediHollow.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -34,7 +34,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  font-family: 'Star Jedi Hollow';
+  font-family: "Star Jedi Hollow";
   color: rgb(229, 177, 58);
   font-size: 72px;
   font-weight: 600;
