@@ -15,3 +15,12 @@ A wrapper around [`star-wars-crawl-greensock-with-hooks`](https://github.com/man
 by [@mandiwise](https://github.com/mandiwise), using the
 [`streamlit-component-template-react-hooks`](https://github.com/whitphx/streamlit-component-template-react-hooks)
 by [@whitphx](https://github.com/whitphx) (credits to them! 👏👏).
+
+## Features
+
+- [x] Custom button
+- [x] Custom intro
+- [x] Custom episode text
+- [x] Custom episode title
+- [x] Custom crawl content
+- [ ] Available on `wide` layout
