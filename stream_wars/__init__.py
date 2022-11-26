@@ -52,23 +52,3 @@ def stream_wars(
         content=content,
         key=key,
     )
-
-
-if __name__ == "__main__":
-    import streamlit as st
-
-    st.title("Stream Wars")
-    st.header("Demo")
-    st.subheader(f"Version: {__version__}")
-    stream_wars(
-        "Tell me a story",
-        intro="Not that long ago, in an office far, far away...",
-        title="dataroddit",
-        episode_number="Episode 0",
-        episode_title="THE RISE OF DATA",
-        content="""This is\na test""",
-        key=None,
-    )
-
-    st.subheader("README")
-    st.markdown((project.parent / "README.md").read_text())

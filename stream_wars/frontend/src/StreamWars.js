@@ -66,7 +66,7 @@ export default function StreamWars() {
           title={renderData.args["title"]}
           episodeNumber={renderData.args["episode_number"]}
           episodeTitle={renderData.args["episode_title"]}
-          content={"this is\n\nthe test"}
+          content={renderData.args["content"]}
         />
       </Dialog>
     </div>
