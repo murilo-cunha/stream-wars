@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/murilo-cunha/stream-wars"><img alt="logo" src="https://raw.githubusercontent.com/murilo-cunha/stream-wars/main/images/stream-wars-logo.png"></a>
+  <a href="https://github.com/murilo-cunha/stream-wars"><img width="50%" alt="logo" src="https://raw.githubusercontent.com/murilo-cunha/stream-wars/main/images/stream-wars-logo.png"></a>
 </p>
 
 > A Star Wars crawl component for Streamlit apps!
