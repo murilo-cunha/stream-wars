@@ -7,7 +7,7 @@ from docstring_parser import parse
 
 from stream_wars import project, stream_wars
 
-st.markdown((project.parent / "README.md").read_text())
+st.markdown((project.parent / "README.md").read_text(), unsafe_allow_html=True)
 st.header("Demo")
 (txt_input,) = (
     st.text_input(
