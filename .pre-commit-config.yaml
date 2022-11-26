@@ -7,14 +7,10 @@ repos:
       - id: end-of-file-fixer
         exclude: "LICENSE"
       - id: trailing-whitespace
-  - repo: https://github.com/psf/black
-    rev: 22.6.0
+  - repo: https://github.com/Zac-HD/shed
+    rev: 0.10.7
     hooks:
-      - id: black
-  - repo: https://github.com/pycqa/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
+      - id: shed
   - repo: https://github.com/pycqa/flake8
     rev: 4.0.1
     hooks:
