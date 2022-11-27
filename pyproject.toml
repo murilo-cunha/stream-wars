@@ -4,7 +4,14 @@ version = "0.0.0-dev"
 description = "Streamlit component to generate the Star Wars crawl text."
 authors = ["Murilo Cunha <murilo@dataroots.io>"]
 license = "MIT"
-exclude = ["stream_wars/docs.py"]
+include = ["stream_wars/frontend/build/*"]
+exclude = [
+  "stream_wars/docs.py",
+  "stream_wars/frontend/public",
+  "stream_wars/frontend/src",
+  "stream_wars/frontend/package.json",
+  "stream_wars/frontend/yarn.lock"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
