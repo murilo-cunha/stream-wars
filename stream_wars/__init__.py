@@ -1,12 +1,12 @@
 """Registry of React component to Streamlit."""
-import os
 from importlib.metadata import version
 from pathlib import Path
 
+import streamlit as st
 import streamlit.components.v1 as components
 from streamlit.components.v1.components import CustomComponent
 
-_RELEASE = os.getenv("STREAMLIT_RELEASE", True)
+_RELEASE = st.secrets.get("STREAMLIT_RELEASE", True)
 
 project = Path(__file__).parent
 __version__ = version(project.stem)
