@@ -16,7 +16,7 @@ __version__ = version(_project.stem)
 
 if _RELEASE:
     build_dir = _project / "frontend" / "build"
-    _stream_wars = components.declare_component("stream_wars", path=build_dir)
+    _stream_wars = components.declare_component("stream_wars", path=str(build_dir))
 else:
     _stream_wars = components.declare_component(
         "stream_wars",
