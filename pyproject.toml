@@ -20,15 +20,8 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 # Devtools not in environment, but used in `pre-commit`
-[tool.black]
-include = "(stream_wars/)"
-
 [tool.mypy]
 files = ["stream_wars"]
 disallow_untyped_calls = true
 disallow_untyped_defs = true
 ignore_missing_imports = true
-
-[tool.isort]
-skip_glob = ["docs/*"]
-profile = "black"
