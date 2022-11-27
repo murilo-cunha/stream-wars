@@ -36,6 +36,7 @@ jobs:
         with:
           node-version: '16'
           cache: 'yarn'
+          cache-dependency-path: 'stream_wars/frontend/yarn.lock'
       - name: Install dependencies
         run: |
           pip install poetry==${{ env.POETRY_VERSION }}
