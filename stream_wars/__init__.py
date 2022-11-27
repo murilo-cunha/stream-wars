@@ -6,7 +6,7 @@ from pathlib import Path
 import streamlit.components.v1 as components
 from streamlit.components.v1.components import CustomComponent
 
-_RELEASE = os.getenv("STREAMLIT_RELEASE", False)
+_RELEASE = os.getenv("STREAMLIT_RELEASE", True)
 
 project = Path(__file__).parent
 __version__ = version(project.stem)
