@@ -6,13 +6,16 @@ import streamlit as st
 import streamlit.components.v1 as components
 from streamlit.components.v1.components import CustomComponent
 
-_RELEASE = st.secrets.get("STREAMLIT_RELEASE", True)
+if Path(".streamlit/secrets.toml").is_file():
+    _RELEASE = st.secrets.get("STREAMLIT_RELEASE", True)
+else:
+    _RELEASE = True
 
-project = Path(__file__).parent
-__version__ = version(project.stem)
+_project = Path(__file__).parent
+__version__ = version(_project.stem)
 
 if _RELEASE:
-    build_dir = project / "frontend" / "build"
+    build_dir = _project / "frontend" / "build"
     _stream_wars = components.declare_component("stream_wars", path=build_dir)
 else:
     _stream_wars = components.declare_component(

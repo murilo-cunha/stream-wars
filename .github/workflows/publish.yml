@@ -46,7 +46,6 @@ jobs:
       - name: Bump package version
         run: |
           poetry version ${{ needs.get-new-tag.outputs.tag-id }}
-          echo '__version__ = "${{ needs.get-new-tag.outputs.tag-id }}"' > stream_wars/_version.py
       - name: Build frontend
         run: |
           cd stream_wars/frontend &&
