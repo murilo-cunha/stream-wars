@@ -1,9 +1,15 @@
 [tool.poetry]
 name = "stream-wars"
-version = "0.0.0-dev"
+version = "0.0.0-dev"  # dynamically set in CI
 description = "Streamlit component to generate the Star Wars crawl text."
 authors = ["Murilo Cunha <murilo@dataroots.io>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://murilo-cunha-stream-wars-stream-warsdocs-slmccu.streamlit.app/"
+repository = "https://github.com/murilo-cunha/stream-wars"
+keywords = ["streamlit-components", "streamlit", "react"]
+
+
 include = ["stream_wars/frontend/build/*"]
 exclude = [
   "stream_wars/docs.py",
