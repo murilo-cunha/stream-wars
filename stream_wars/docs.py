@@ -9,29 +9,6 @@ from stream_wars import _project, stream_wars
 
 st.markdown((_project.parent / "README.md").read_text(), unsafe_allow_html=True)
 
-# st.header("Demo")
-# (txt_input,) = (
-#     st.text_input(
-#         "Tell a story",
-#         value=(
-#             "Once upon a time, there was a boy that really liked Streamlit and Star"
-#             " Wars, but couldn't use a Star Wars 'crawl' of his own. He decided to"
-#             " take matters into his own hands and create a new component. Legend says"
-#             " our hero still looks for contributions, and that bugs still lurk in the"
-#             " dark..."
-#         ),
-#     ),
-# )
-# stream_wars(
-#     "Magic 🪄",
-#     intro="Not that long ago, in an office not so far, far away...",
-#     title="Stream Wars",
-#     episode_number="Episode 0",
-#     episode_title="A NEW COMPONENT",
-#     content=txt_input,
-#     key=None,
-# )
-
 # Docs
 
 _docstr = parse(stream_wars.__doc__)
