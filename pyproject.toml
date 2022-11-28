@@ -10,7 +10,7 @@ repository = "https://github.com/murilo-cunha/stream-wars"
 keywords = ["streamlit-components", "streamlit", "react"]
 
 
-include = ["stream_wars/frontend/build/*"]
+include = ["stream_wars/frontend/build/**/*"]
 exclude = [
   "stream_wars/docs.py",
   "stream_wars/frontend/public",
